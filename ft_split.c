@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 07:15:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/03/18 01:48:56 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/03/19 06:27:13 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,19 @@ char	**ft_split(char const *str, char c)
 	}
 	res[i] = NULL;
 	return (res);
+}
+
+void	free_all_str(char **res)
+{
+	int	i;
+
+	i = 0;
+	while (res[i])
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
 }
 
 // int main (void)

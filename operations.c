@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:32:38 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/06 18:48:05 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ void	stack_init(t_node **a, char **argv, bool flag)
 			free_error(a, argv, flag);
 		}
 		nb = ft_atoi(argv[i]);
-		if (nb > INT_MAX || nb < INT_MIN)
+		if (nb > INT_MAX || nb < INT_MIN || check_repetition(a, nb) == 1)
 			free_error(a, argv, flag);
-		//check for repetition
 		node = ft_lstnew(nb);
 		ft_lstadd_back(a, node);
 		i++;

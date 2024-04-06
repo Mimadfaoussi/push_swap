@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:28:02 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/06 18:47:32 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,17 @@ void	free_error(t_node **a, char **argv, bool flag)
 	exit(0);
 }
 
+int	check_repetition(t_node **a, int nb)
+{
+	t_node	*index;
+
+	index = *a;
+	while (index)
+	{
+		if (index->value == nb)
+			return (1);
+		index = index->next;
+	}
+	return (0);
+}
 

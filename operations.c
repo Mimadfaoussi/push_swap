@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/03/19 06:48:03 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/06 18:32:38 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ void	stack_init(t_node **a, char **argv, bool flag)
 	while (argv[i])
 	{
 		if (syntax_checker(argv[i]) == 1)
-			print("filc syntax checker trure");
-			// free_error(a, argv, flag);
+		{
+			printf("syntax checker error\n");
+			free_error(a, argv, flag);
+		}
 		nb = ft_atoi(argv[i]);
-		// if (nb > INT_MAX || nb < INT_MIN)
-		// 	free_error(a, argv, flag);
+		if (nb > INT_MAX || nb < INT_MIN)
+			free_error(a, argv, flag);
 		//check for repetition
 		node = ft_lstnew(nb);
 		ft_lstadd_back(a, node);

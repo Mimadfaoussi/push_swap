@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/03/19 06:28:08 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/06 18:26:20 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t destsize);
 size_t	ft_strlen(const char *s);
 void	free_all_str(char **res);
 int		ft_atoi(const char *str);
+
+/** Errors checking */
+int		syntax_checker(char *nbr);
+void	ft_lstclear(t_node **lst);
+void	free_error(t_node **a, char **argv, bool flag);
 
 #endif

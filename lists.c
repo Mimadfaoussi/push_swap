@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:18:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/03/18 01:46:37 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/06 18:26:43 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,18 @@ t_node	*ft_lstlast(t_node *lst)
 	while (index->next != NULL)
 		index = index->next;
 	return (index);
+}
+
+void	ft_lstclear(t_node **lst)
+{
+	t_node	*index;
+
+	while (*lst != NULL)
+	{
+		index = *lst;
+		*lst = (*lst)->next;
+		index->next = NULL;
+		free(index);
+	}
+	lst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/03/19 06:47:12 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/06 18:28:02 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,20 @@ int	syntax_checker(char *nbr)
 		i++;
 	while (nbr[i])
 	{
-		if (nbr[i] < '0' || nb[i] > '9')
+		if (nbr[i] < '0' || nbr[i] > '9')
 			return (1);
 		i++;
 	}
 	return (0);
 }
+
+void	free_error(t_node **a, char **argv, bool flag)
+{
+	ft_lstclear(a);
+	if (flag == true)
+		free_all_str(argv);
+	printf("all freed successfully");
+	exit(0);
+}
+
 

@@ -16,7 +16,7 @@ void	stack_init(t_node **a, char **argv, bool flag)
 {
 	t_node	*node;
 	int		i;
-	int		nb;
+	long	nb;
 
 	i = 0;
 	while (argv[i])

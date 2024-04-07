@@ -41,7 +41,7 @@ char	**ft_split(char const *str, char c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize);
 size_t	ft_strlen(const char *s);
 void	free_all_str(char **res);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 
 /** Errors checking */
 int		syntax_checker(char *nbr);

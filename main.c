@@ -12,6 +12,18 @@
 
 #include "pushswap.h"
 
+void	printlst(char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (argv[i])
+	{
+		printf("%s\n",argv[i]);
+		i++;
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_node	*a;
@@ -23,7 +35,10 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-	stack_init(&a, argv + 1, argc == 2);
+	if (argc > 2)
+		stack_init(&a, argv + 1, argc == 2);
+	else
+ 		stack_init(&a, argv , argc == 2);
 	print_stack(&a);
 	// if (!sorted_stack(a))
 	// {

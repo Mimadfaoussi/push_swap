@@ -23,7 +23,7 @@ void	stack_init(t_node **a, char **argv, bool flag)
 	{
 		if (syntax_checker(argv[i]) == 1)
 		{
-			printf("syntax checker error\n");
+			printf("syntax checker error %s\n",argv[i]);
 			free_error(a, argv, flag);
 		}
 		nb = ft_atoi(argv[i]);

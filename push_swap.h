@@ -51,4 +51,6 @@ int		check_repetition(t_node **a, int nb);
 
 /** stack functions */
 bool	sorted_stack(t_node *a);
+int		stack_length(t_node *stack);
+
 #endif

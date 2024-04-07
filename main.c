@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 	if (!sorted_stack(a))
 	{
 		// printf("stack is not sorted %d\n",stack_length(a));
-		// if (stack_length == 2)
+		// if (stack_length(a) == 2) 
 		// 	swap(&a);
 		// else if (stack_length(a) == 3)
 		// 	stack_sort_3(&a);

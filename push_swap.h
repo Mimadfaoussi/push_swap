@@ -49,4 +49,6 @@ void	ft_lstclear(t_node **lst);
 void	free_error(t_node **a, char **argv, bool flag);
 int		check_repetition(t_node **a, int nb);
 
+/** stack functions */
+bool	sorted_stack(t_node *a);
 #endif

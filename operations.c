@@ -48,3 +48,16 @@ void	print_stack(t_node **a)
 		index = index->next;
 	}
 }
+
+bool	sorted_stack(t_node *a)
+{
+	if (!a)
+		return (1);
+	while (a->next)
+	{
+		if (a->value > a->next->value)
+			return (false);
+		a = a->next;
+	}
+	return (true);
+}

@@ -40,15 +40,16 @@ int	main(int argc, char **argv)
 	else
  		stack_init(&a, argv , argc == 2);
 	print_stack(&a);
-	// if (!sorted_stack(a))
-	// {
-	// 	if (stack_length == 2)
-	// 		swap(&a);
-	// 	else if (stack_length(a) == 3)
-	// 		stack_sort_3(&a);
-	// 	else
-	// 		stack_sort(&a, &b);
-	// }
+	if (!sorted_stack(a))
+	{
+		printf("stack is not sorted\n");
+		// if (stack_length == 2)
+		// 	swap(&a);
+		// else if (stack_length(a) == 3)
+		// 	stack_sort_3(&a);
+		// else
+		// 	stack_sort(&a, &b);
+	}
 	// free_stack(&a)
 	return (0);
 }

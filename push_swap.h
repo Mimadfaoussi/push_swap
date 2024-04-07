@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushswap.h                                         :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:47:14 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/07 19:09:40 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,14 @@ int		check_repetition(t_node **a, int nb);
 /** stack functions */
 bool	sorted_stack(t_node *a);
 int		stack_length(t_node *stack);
+
+/** stack commands */
+void	swap(t_node	**head);
+void	sa(t_node **a);
+void	sb(t_node **b);
+void	ss(t_node **a, t_node **b);
+void	push(t_node **dst, t_node **src);
+void	pa(t_node **a, t_node **b);
+void	pb(t_node **b, t_node **a);
 
 #endif

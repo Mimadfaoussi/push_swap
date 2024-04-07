@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:45:21 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/07 19:10:59 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	printlst(char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		printf("%s\n",argv[i]);
+		printf("%s\n", argv[i]);
 		i++;
 	}
 }
@@ -39,17 +39,20 @@ int	main(int argc, char **argv)
 		stack_init(&a, argv + 1, argc == 2);
 	else
  		stack_init(&a, argv , argc == 2);
-	print_stack(&a);
 	if (!sorted_stack(a))
 	{
 		// printf("stack is not sorted %d\n",stack_length(a));
-		// if (stack_length(a) == 2) 
-		// 	swap(&a);
+		if (stack_length(a) == 2) 
+			sa(&a);
 		// else if (stack_length(a) == 3)
 		// 	stack_sort_3(&a);
 		// else
 		// 	stack_sort(&a, &b);
 	}
+	pb(&b, &a);
+	print_stack(&b);
+	pa(&a, &b);
+	print_stack(&a);
 	// free_stack(&a)
 	return (0);
 }

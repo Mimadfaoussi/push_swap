@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/07 19:09:40 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:42:54 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_node	*ft_lstnew(int value);
 t_node	*ft_lstlast(t_node *lst);
 void	print_stack(t_node **a);
 void	stack_init(t_node **a, char **argv, bool flag);
-t_node  *find_biggest(t_node **a);
+t_node	*find_biggest(t_node **a);
 
 char	**ft_split(char const *str, char c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize);
@@ -53,8 +53,7 @@ int		check_repetition(t_node **a, int nb);
 /** stack functions */
 bool	sorted_stack(t_node *a);
 int		stack_length(t_node *stack);
-void    stack_sort_3(t_node **a);
-
+void	stack_sort_3(t_node **a);
 
 /** stack commands */
 void	swap(t_node	**head);
@@ -65,12 +64,12 @@ void	push(t_node **dst, t_node **src);
 void	pa(t_node **a, t_node **b);
 void	pb(t_node **b, t_node **a);
 void	rotate(t_node **head);
-void    ra(t_node **a);
-void    rb(t_node **b);
-void    rr(t_node **a, t_node **b);
-void    reverse_rotate(t_node **head);
-void    rra(t_node  **a);
-void    rrb(t_node  **b);
-void    rrr(t_node **a, t_node  **b);
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	reverse_rotate(t_node **head);
+void	rra(t_node **a);
+void	rrb(t_node **b);
+void	rrr(t_node **a, t_node **b);
 
 #endif

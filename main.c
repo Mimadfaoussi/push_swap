@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/07 19:10:59 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:40:19 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	printlst(char **argv)
 		i++;
 	}
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	t_node	*a;
@@ -53,3 +53,4 @@ int	main(int argc, char **argv)
 	// free_stack(&a)
 	return (0);
 }
+*/

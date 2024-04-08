@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:47:32 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:40:00 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,3 @@ int	check_repetition(t_node **a, int nb)
 	}
 	return (0);
 }
-

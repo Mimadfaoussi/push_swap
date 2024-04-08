@@ -52,12 +52,12 @@ int	main(int argc, char **argv)
 	pb(&b, &a);
 	pb(&b, &a);
 	pb(&b, &a);
-	rb(&b);
-	rr(&a, &b);
-	print_stack(&b);
-	// sa(&a);
-	ra(&a);
+	rrr(&a, &b);
+	rrr(&a, &b);
+	printf("stack a\n");
 	print_stack(&a);
+	printf("stack b\n");
+	print_stack(&b);
 	// free_stack(&a)
 	return (0);
 }

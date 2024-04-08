@@ -65,5 +65,9 @@ void	rotate(t_node **head);
 void    ra(t_node **a);
 void    rb(t_node **b);
 void    rr(t_node **a, t_node **b);
+void    reverse_rotate(t_node **head);
+void    rra(t_node  **a);
+void    rrb(t_node  **b);
+void    rrr(t_node **a, t_node  **b);
 
 #endif

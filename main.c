@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/08 16:40:19 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/08 19:33:59 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	printlst(char **argv)
 		i++;
 	}
 }
-/*
+
 int	main(int argc, char **argv)
 {
 	t_node	*a;
@@ -41,16 +41,15 @@ int	main(int argc, char **argv)
  		stack_init(&a, argv , argc == 2);
 	if (!sorted_stack(a))
 	{
-		// printf("stack is not sorted %d\n",stack_length(a));
+		printf("stack is not sorted %d\n",stack_length(a));
 		if (stack_length(a) == 2) 
 			sa(&a);
 		else if (stack_length(a) == 3)
 			stack_sort_3(&a);
-		// else
-		// 	stack_sort(&a, &b);
+		else
+			stack_sort(&a, &b);
 	}
 	print_stack(&a);
-	// free_stack(&a)
+	free_stack(&a)
 	return (0);
 }
-*/

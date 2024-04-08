@@ -36,6 +36,7 @@ t_node	*ft_lstnew(int value);
 t_node	*ft_lstlast(t_node *lst);
 void	print_stack(t_node **a);
 void	stack_init(t_node **a, char **argv, bool flag);
+t_node  *find_biggest(t_node **a);
 
 char	**ft_split(char const *str, char c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize);
@@ -52,6 +53,7 @@ int		check_repetition(t_node **a, int nb);
 /** stack functions */
 bool	sorted_stack(t_node *a);
 int		stack_length(t_node *stack);
+
 
 /** stack commands */
 void	swap(t_node	**head);

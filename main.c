@@ -44,20 +44,12 @@ int	main(int argc, char **argv)
 		// printf("stack is not sorted %d\n",stack_length(a));
 		if (stack_length(a) == 2) 
 			sa(&a);
-		// else if (stack_length(a) == 3)
-		// 	stack_sort_3(&a);
+		else if (stack_length(a) == 3)
+			stack_sort_3(&a);
 		// else
 		// 	stack_sort(&a, &b);
 	}
-	pb(&b, &a);
-	pb(&b, &a);
-	pb(&b, &a);
-	rrr(&a, &b);
-	rrr(&a, &b);
-	printf("stack a\n");
 	print_stack(&a);
-	printf("stack b\n");
-	print_stack(&b);
 	// free_stack(&a)
 	return (0);
 }

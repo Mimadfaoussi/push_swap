@@ -61,5 +61,9 @@ void	ss(t_node **a, t_node **b);
 void	push(t_node **dst, t_node **src);
 void	pa(t_node **a, t_node **b);
 void	pb(t_node **b, t_node **a);
+void	rotate(t_node **head);
+void    ra(t_node **a);
+void    rb(t_node **b);
+void    rr(t_node **a, t_node **b);
 
 #endif

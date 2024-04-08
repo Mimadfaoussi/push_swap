@@ -11,3 +11,37 @@
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void    rotate(t_node **head)
+{
+    t_node  *last;
+    t_node  *index;
+
+    if (!*head || stack_length(*head) == 1)
+        return ;
+    index = *head;
+    last = ft_lstlast(*head);
+    *head = (*head)->next;
+    (*head)->prev = NULL;
+    last->next = index;
+    index->next = NULL;
+}
+
+void    ra(t_node **a)
+{
+    rotate(a);
+    printf("ra\n");
+}
+
+void    rb(t_node **b)
+{
+    rotate(b);
+    printf("rb\n");
+}
+
+void    rr(t_node **a, t_node **b)
+{
+    rotate(a);
+    rotate(b);
+    printf("rr\n");
+}

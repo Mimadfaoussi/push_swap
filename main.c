@@ -50,8 +50,13 @@ int	main(int argc, char **argv)
 		// 	stack_sort(&a, &b);
 	}
 	pb(&b, &a);
+	pb(&b, &a);
+	pb(&b, &a);
+	rb(&b);
+	rr(&a, &b);
 	print_stack(&b);
-	pa(&a, &b);
+	// sa(&a);
+	ra(&a);
 	print_stack(&a);
 	// free_stack(&a)
 	return (0);

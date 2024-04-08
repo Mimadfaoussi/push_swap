@@ -53,6 +53,7 @@ int		check_repetition(t_node **a, int nb);
 /** stack functions */
 bool	sorted_stack(t_node *a);
 int		stack_length(t_node *stack);
+void    stack_sort_3(t_node **a);
 
 
 /** stack commands */

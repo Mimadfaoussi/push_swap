@@ -30,7 +30,15 @@ t_node  *find_biggest(t_node **a)
     return (biggest);
 }
 
-// void    stack_sort_3(t_node **a)
-// {
+void    stack_sort_3(t_node **a)
+{
+    t_node  *index;
 
-// }
+    index = find_biggest(a);
+    if (index == *a)
+        ra(a);
+    else if (index == (*a)->next)
+        rra(a);
+    if (!sorted_stack(*a))
+        sa(a);
+}

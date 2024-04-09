@@ -25,6 +25,7 @@ void	rotate(t_node **head)
 	(*head)->prev = NULL;
 	last->next = index;
 	index->next = NULL;
+	index->prev = last;
 }
 
 void	ra(t_node **a)

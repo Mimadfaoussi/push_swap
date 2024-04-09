@@ -52,14 +52,14 @@ void	stack_sort(t_node **a, t_node **b)
 	while (stack_length(*a) > 3 && !sorted_stack(*a))
 	{
 		preparing_a(a, b);
-		//a_to_b(a, b);
-		pb(b, a);
+		a_to_b(a, b);
 	}
 	stack_sort_3(a);
-	// while (*b)
-	// {
-	// 	pa(a, b);
-	// }
+	while (*b)
+	{
+		preparing_b(b, a);
+		b_to_a(b, a);
+	}
 }
 
 

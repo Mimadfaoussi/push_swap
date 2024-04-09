@@ -22,7 +22,7 @@ void    preparing_a(t_node **a, t_node **b)
 /**
 ia = index a
 ib = index b
-b_s = biggest smaller number
+b_s = closest smaller number
 */
 void	a_targets(t_node **a, t_node **b)
 {
@@ -91,3 +91,4 @@ void    index_position(t_node **stack)
 		i++;
 	}
 }
+

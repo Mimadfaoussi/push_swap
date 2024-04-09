@@ -53,12 +53,13 @@ void	stack_sort(t_node **a, t_node **b)
 	{
 		preparing_a(a, b);
 		//a_to_b(a, b);
+		pb(b, a);
 	}
 	stack_sort_3(a);
-	while (*b)
-	{
-		pa(a, b);
-	}
+	// while (*b)
+	// {
+	// 	pa(a, b);
+	// }
 }
 
 

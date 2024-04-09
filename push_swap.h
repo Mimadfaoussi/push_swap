@@ -76,6 +76,6 @@ void	rrr(t_node **a, t_node **b);
 /** stack init */
 void    preparing_a(t_node **a, t_node **b);
 void    index_position(t_node **stack);
-
+void	a_targets(t_node **a, t_node **b);
 
 #endif

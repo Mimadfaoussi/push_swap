@@ -44,7 +44,7 @@ void	print_stack(t_node **a)
 	index = *a;
 	while (index)
 	{
-		printf("%d\n", index->value);
+		printf("value = %d  target = %d\n", index->value, index->target_node->value);
 		index = index->next;
 	}
 }

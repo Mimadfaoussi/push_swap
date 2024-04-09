@@ -17,6 +17,8 @@ void    preparing_a(t_node **a, t_node **b)
 	index_position(a);
 	index_position(b);
 	a_targets(a, b);
+	set_cost_a(a, b);
+	set_cheapest(a);
 }
 
 /**

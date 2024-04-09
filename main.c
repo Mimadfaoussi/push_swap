@@ -50,6 +50,6 @@ int	main(int argc, char **argv)
 			stack_sort(&a, &b);
 	}
 	print_stack(&a);
-	free_stack(&a)
+	// free_stack(&a)
 	return (0);
 }

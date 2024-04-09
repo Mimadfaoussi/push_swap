@@ -54,6 +54,7 @@ int		check_repetition(t_node **a, int nb);
 bool	sorted_stack(t_node *a);
 int		stack_length(t_node *stack);
 void	stack_sort_3(t_node **a);
+void	stack_sort(t_node **a, t_node **b);
 
 /** stack commands */
 void	swap(t_node	**head);
@@ -71,5 +72,10 @@ void	reverse_rotate(t_node **head);
 void	rra(t_node **a);
 void	rrb(t_node **b);
 void	rrr(t_node **a, t_node **b);
+
+/** stack init */
+void    preparing_a(t_node **a, t_node **b);
+void    index_position(t_node **stack);
+
 
 #endif

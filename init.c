@@ -12,53 +12,32 @@
 
 #include "push_swap.h"
 
-t_node	*find_biggest(t_node **a)
+void    preparing_a(t_node **a, t_node **b)
 {
-	t_node	*biggest;
-	t_node	*index;
+    index_position(a);
+    index_position(b);
 
-	if (!*a)
-		return (NULL);
-	biggest = *a;
-	index = *a;
-	while (index)
-	{
-		if (index->value > biggest->value)
-			biggest = index;
-		index = index->next;
-	}
-	return (biggest);
 }
 
-void	stack_sort_3(t_node **a)
+void    index_position(t_node **stack)
 {
-	t_node	*index;
+    t_node  *index;
+    int     i;
+    int     middle;
 
-	index = find_biggest(a);
-	if (index == *a)
-		ra(a);
-	else if (index == (*a)->next)
-		rra(a);
-	if (!sorted_stack(*a))
-		sa(a);
+    if (!*stack)
+        return ;
+    index = *stack;
+    middle = stack_length(*stack) / 2;
+    i = 0;
+    while (index)
+    {
+        if (i <= middle)
+            index->above_median = true;
+        else
+            index->above_median = false;
+        index->index = i;
+        index = index->next;
+        i++;
+    }
 }
-
-void	stack_sort(t_node **a, t_node **b)
-{
-
-	pb(b, a);
-	if (stack_length(*a) > 3 && !sorted_stack(*a))
-		pb(b, a);
-	while (stack_length(*a) > 3 && !sorted_stack(*a))
-	{
-		preparing_a(a, b);
-		//a_to_b(a, b);
-	}
-	stack_sort_3(a);
-	while (*b)
-	{
-		pa(a, b);
-	}
-}
-
-

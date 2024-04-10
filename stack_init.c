@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/08 16:41:33 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/10 06:22:44 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	print_stack(t_node **a)
 	index = *a;
 	while (index)
 	{
-		printf("value = %d  target = %d\n", index->value, index->target_node->value);
+		printf("%d\n", index->value);
 		index = index->next;
 	}
 }

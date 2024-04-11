@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/11 17:11:40 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/11 18:26:08 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	print_stack(t_node **a)
 	while (index)
 	{
 		printf("value = %d , cost = %d\n", index->value, index->push_cost);
+		printf("cheapest = %d\n", index->cheapest);
 		index = index->next;
 	}
 }

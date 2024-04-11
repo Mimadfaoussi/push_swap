@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/11 16:49:58 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/11 18:31:11 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	preparing_a(t_node **a, t_node **b)
 	index_position(b);
 	a_targets(a, b);
 	set_cost_a(a, b);
-	//set_cheapest(a);
+	set_cheapest(a);
 }
 
 void	index_position(t_node **stack)
@@ -99,3 +99,37 @@ void	set_cost_a(t_node **a, t_node **b)
 		index_a = index_a->next;
 	}
 }
+
+void	init_cheapest_false(t_node **a)
+{
+	t_node	*index;
+
+	index = *a;
+	while (index)
+	{
+		index->cheapest = false;
+		index = index->next;
+	}
+}
+
+void	set_cheapest(t_node **a)
+{
+	t_node	*index;
+	t_node	*cheapest;
+	long	min;
+
+	init_cheapest_false(a);
+	min = LONG_MAX;
+	index = *a;
+	while (index)
+	{
+		if (index->push_cost < min)
+		{
+			cheapest = index;
+			min = index->push_cost;
+		}
+		index = index->next;
+	}
+	cheapest->cheapest = true;
+}
+

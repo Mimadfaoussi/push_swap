@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/10 06:38:55 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:49:58 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	preparing_a(t_node **a, t_node **b)
 	index_position(a);
 	index_position(b);
 	a_targets(a, b);
-	//set_cost_a(a, b);
+	set_cost_a(a, b);
 	//set_cheapest(a);
 }
 

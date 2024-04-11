@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/10 06:22:44 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:51:38 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,6 @@ void	stack_init(t_node **a, char **argv, bool flag)
 		free_all_str(argv);
 }
 
-void	print_stack(t_node **a)
-{
-	t_node	*index;
-
-	index = *a;
-	while (index)
-	{
-		printf("%d\n", index->value);
-		index = index->next;
-	}
-}
 
 bool	sorted_stack(t_node *a)
 {

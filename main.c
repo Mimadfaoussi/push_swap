@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 16:02:40 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:15:11 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc == 1 || (argc == 2) && !argv[1][0])
+	if (argc == 1 || ((argc == 2) && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
@@ -62,7 +62,6 @@ int	main(int argc, char **argv)
 		else
 			stack_sort(&a, &b);
 	}
-	print_stack(&a);
 	free_stack(&a, argv, argc == 2);
 	return (0);
 }

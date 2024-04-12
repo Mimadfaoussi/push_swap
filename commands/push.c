@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 18:41:10 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/08 17:03:22 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:22:57 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	push(t_node **dst, t_node **src)
 void	pa(t_node **a, t_node **b)
 {
 	push(a, b);
-	printf("pa\n");
+	ft_putstr("pa\n");
 }
 
 void	pb(t_node **b, t_node **a)
 {
 	push(b, a);
-	printf("pb\n");
+	ft_putstr("pb\n");
 }

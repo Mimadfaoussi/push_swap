@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 20:52:52 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/08 16:39:13 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:23:32 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ void	rotate(t_node **head)
 void	ra(t_node **a)
 {
 	rotate(a);
-	printf("ra\n");
+	ft_putstr("ra\n");
 }
 
 void	rb(t_node **b)
 {
 	rotate(b);
-	printf("rb\n");
+	ft_putstr("rb\n");
 }
 
 void	rr(t_node **a, t_node **b)
 {
 	rotate(a);
 	rotate(b);
-	printf("rr\n");
+	ft_putstr("rr\n");
 }

@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/11 16:51:38 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:26:12 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	stack_init(t_node **a, char **argv, bool flag)
 	{
 		if (syntax_checker(argv[i]) == 1)
 		{
-			printf("syntax checker error %s\n", argv[i]);
+			ft_putstr("syntax checker error \n");
 			free_error(a, argv, flag);
 		}
 		nb = ft_atoi(argv[i]);

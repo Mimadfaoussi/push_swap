@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 18:41:10 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/08 16:52:31 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:23:18 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ void	reverse_rotate(t_node **head)
 void	rra(t_node **a)
 {
 	reverse_rotate(a);
-	printf("rra\n");
+	ft_putstr("rra\n");
 }
 
 void	rrb(t_node **b)
 {
 	reverse_rotate(b);
-	printf("rrb\n");
+	ft_putstr("rrb\n");
 }
 
 void	rrr(t_node **a, t_node **b)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);
-	printf("rrr\n");
+	ft_putstr("rrr\n");
 }

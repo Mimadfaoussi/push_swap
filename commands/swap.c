@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 16:54:47 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/08 16:43:43 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:23:44 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ void	swap(t_node	**head)
 void	sa(t_node **a)
 {
 	swap(a);
-	printf("sa\n");
+	ft_putstr("sa\n");
 }
 
 void	sb(t_node **b)
 {
 	swap(b);
-	printf("sb\n");
+	ft_putstr("sb\n");
 }
 
 void	ss(t_node **a, t_node **b)
 {
 	swap(a);
 	swap(b);
-	printf("ss\n");
+	ft_putstr("ss\n");
 }

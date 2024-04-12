@@ -1,55 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_errors.c                                     :+:      :+:    :+:   */
+/*   init_helper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:24:13 by mfaoussi         ###   ########.fr       */
+/*   Created: 2024/04/12 15:31:02 by mfaoussi          #+#    #+#             */
+/*   Updated: 2024/04/12 15:32:33 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	syntax_checker(char *nbr)
-{
-	int	i;
-
-	i = 0;
-	if (nbr[i] == '-' || nbr[i] == '+')
-		i++;
-	while (nbr[i])
-	{
-		if (nbr[i] < '0' || nbr[i] > '9')
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-void	free_error(t_node **a, char **argv, bool flag)
-{
-	ft_lstclear(a);
-	if (flag == true)
-		free_all_str(argv);
-	ft_putstr("all freed successfully\n");
-	exit(0);
-}
-
-int	check_repetition(t_node **a, int nb)
+void	init_cheapest_false(t_node **a)
 {
 	t_node	*index;
 
 	index = *a;
 	while (index)
 	{
-		if (index->value == nb)
-		{
-			ft_putstr("found repetition \n");
-			return (1);
-		}
+		index->cheapest = false;
 		index = index->next;
 	}
+}
+
+t_node	*find_cheapest(t_node **a)
+{
+	t_node	*index;
+
+	index = *a;
+	while (index)
+	{
+		if (index->cheapest == true)
+			return (index);
+		index = index->next;
+	}
+	return (NULL);
+}
+
+int	same_direction(t_node *elm)
+{
+	if (elm->above_median == elm->target_node->above_median)
+		return (1);
 	return (0);
 }
+

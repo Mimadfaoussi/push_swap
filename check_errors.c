@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 18:03:16 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:51:39 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,4 @@ void	free_stack(t_node **a, char **argv, bool flag)
 	ft_lstclear(a);
 	if (flag == true)
 		free_all_str(argv);
-	// ft_putstr("all freed successfully\n");
 }

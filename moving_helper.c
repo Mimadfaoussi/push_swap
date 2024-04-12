@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:32:58 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:37:38 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:51:49 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,10 +110,10 @@ void	b_to_a(t_node **b, t_node **a)
 				rrr(b, a);
 			i++;
 		}
-		take_cheapest_up(b, a, cheapest);
+		take_cheapest_up_b(a, b, cheapest);
 	}
 	else
 	{
-		take_cheapest_up(b, a, cheapest);
+		take_cheapest_up_b(a, b, cheapest);
 	}
 }

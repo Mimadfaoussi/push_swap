@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 12:42:29 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:21:25 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,10 @@ void	b_targets(t_node **b, t_node **a);
 void	b_to_a(t_node **a, t_node **b);
 t_node	*find_smallest(t_node **stack);
 void	set_cost_b(t_node **b, t_node **a);
+void	take_smallest_up(t_node **a, t_node *smallest);
+
+
+void	ft_putstr(char *str);
+void	ft_putchar(char c);
 
 #endif

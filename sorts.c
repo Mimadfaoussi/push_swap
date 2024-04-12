@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 13:31:49 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:05:26 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,5 @@ void	stack_sort(t_node **a, t_node **b)
 		b_to_a(b, a);
 		pa(a, b);
 	}
+	take_smallest_up(a, find_smallest(a));
 }

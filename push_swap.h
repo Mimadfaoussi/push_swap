@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/11 18:48:09 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:32:48 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,6 @@ void	set_cost_a(t_node **a, t_node **b);
 void	set_cheapest(t_node **a);
 void	init_cheapest_false(t_node **a);
 t_node	*find_cheapest(t_node **a);
+void	a_to_b(t_node **a, t_node **b);
 
 #endif

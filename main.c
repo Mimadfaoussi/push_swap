@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/11 18:47:33 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:52:58 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void	print_stack(t_node **a)
 	index = *a;
 	while (index)
 	{
-		printf("value = %d , cost = %d\n", index->value, index->push_cost);
-		printf("cheapest = %d\n", index->cheapest);
+		printf("%d\n", index->value);
+		// printf("cheapest = %d\n", index->cheapest);
 		index = index->next;
 	}
 }
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 	if (argc > 2)
 		stack_init(&a, argv + 1, argc == 2);
 	else
- 		stack_init(&a, argv , argc == 2);
+		stack_init(&a, argv, argc == 2);
 	if (!sorted_stack(a))
 	{
 		printf("stack is not sorted %d\n",stack_length(a));
@@ -62,7 +62,10 @@ int	main(int argc, char **argv)
 		else
 			stack_sort(&a, &b);
 	}
+	printf("stacvk a :\n");
 	print_stack(&a);
+	printf("stacvk b :\n");
+	print_stack(&b);
 	// free_stack(&a)
 	return (0);
 }

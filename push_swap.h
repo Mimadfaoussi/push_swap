@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:38:11 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 16:01:13 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	**ft_split(char const *str, char c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize);
 size_t	ft_strlen(const char *s);
 void	free_all_str(char **res);
+void	free_stack(t_node **a, char **argv, bool flag);
 long	ft_atoi(const char *str);
 
 /** Errors checking */
@@ -84,6 +85,7 @@ t_node	*find_cheapest(t_node **a);
 void	a_to_b(t_node **a, t_node **b);
 void	take_cheapest_up(t_node **a, t_node **b, t_node *cheapest);
 int		get_common_steps(t_node *a, t_node *b, t_node *elm);
+int		get_common_steps_b(t_node *a, t_node *b, t_node *elm);
 int		on_top(t_node **stack, t_node *elm);
 int		same_direction(t_node *elm);
 void	set_cheapest(t_node **a);

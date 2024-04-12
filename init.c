@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 10:51:59 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 13:02:08 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -230,7 +230,6 @@ void	a_to_b(t_node **a, t_node **b)
 	}
 	else
 		take_cheapest_up(a, b, cheapest);
-
 }
 
 

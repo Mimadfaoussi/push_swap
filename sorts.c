@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 10:54:10 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 13:31:49 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ void	stack_sort(t_node **a, t_node **b)
 		pb(b, a);
 	}
 	stack_sort_3(a);
-	// while (*b)
-	// {
-	// 	// preparing_b(b, a);
-	// 	// b_to_a(b, a);
-	// 	pa(a, b);
-	// }
+	while (*b)
+	{
+		preparing_b(b, a);
+		b_to_a(b, a);
+		pa(a, b);
+	}
 }

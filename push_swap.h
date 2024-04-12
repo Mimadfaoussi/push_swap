@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 10:32:48 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 12:42:29 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,19 @@ void	set_cheapest(t_node **a);
 void	init_cheapest_false(t_node **a);
 t_node	*find_cheapest(t_node **a);
 void	a_to_b(t_node **a, t_node **b);
+void	take_cheapest_up(t_node **a, t_node **b, t_node *cheapest);
+int		get_common_steps(t_node *a, t_node *b, t_node *elm);
+int		on_top(t_node **stack, t_node *elm);
+int		same_direction(t_node *elm);
+void	set_cheapest(t_node **a);
+
+
+
+/*** stack b to a */
+void	preparing_b(t_node **b, t_node **a);
+void	b_targets(t_node **b, t_node **a);
+void	b_to_a(t_node **a, t_node **b);
+t_node	*find_smallest(t_node **stack);
+void	set_cost_b(t_node **b, t_node **a);
 
 #endif

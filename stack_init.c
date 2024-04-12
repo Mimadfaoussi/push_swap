@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:26:12 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:39:09 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	stack_init(t_node **a, char **argv, bool flag)
 	if (flag)
 		free_all_str(argv);
 }
-
 
 bool	sorted_stack(t_node *a)
 {

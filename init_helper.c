@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:31:02 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:32:33 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:37:26 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ int	same_direction(t_node *elm)
 		return (1);
 	return (0);
 }
-

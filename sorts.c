@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:05:26 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:38:50 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	stack_sort_3(t_node **a)
 
 void	stack_sort(t_node **a, t_node **b)
 {
-
 	pb(b, a);
 	if (stack_length(*a) > 3 && !sorted_stack(*a))
 		pb(b, a);

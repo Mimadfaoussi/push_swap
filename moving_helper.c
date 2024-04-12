@@ -6,12 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:32:58 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:33:45 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:37:38 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 /**
 * on_top-checks that the element is on the top of the stack
@@ -90,4 +89,31 @@ void	a_to_b(t_node **a, t_node **b)
 	}
 	else
 		take_cheapest_up(a, b, cheapest);
+}
+
+void	b_to_a(t_node **b, t_node **a)
+{
+	t_node	*cheapest;
+	int		nb;
+	int		i;
+
+	i = 0;
+	cheapest = find_cheapest(b);
+	if (same_direction(cheapest) == 1)
+	{
+		nb = get_common_steps_b(*a, *b, cheapest);
+		while (i < nb)
+		{
+			if (cheapest->above_median)
+				rr(b, a);
+			else
+				rrr(b, a);
+			i++;
+		}
+		take_cheapest_up(b, a, cheapest);
+	}
+	else
+	{
+		take_cheapest_up(b, a, cheapest);
+	}
 }

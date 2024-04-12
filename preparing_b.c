@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:28:14 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:25:40 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:37:58 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,10 @@ void	set_cost_b(t_node **b, t_node **a)
 		if (index_b->above_median == false)
 			push_cost = stack_length(*b) - index_b->index;
 		if ((index_b->target_node)->above_median == false)
-			push_cost = push_cost + stack_length(*a) - (index_b->target_node)->index;
+		{
+			push_cost = push_cost + stack_length(*a);
+			push_cost = push_cost - (index_b->target_node)->index;
+		}
 		else
 			push_cost = push_cost + (index_b->target_node)->index;
 		index_b->push_cost = push_cost;
@@ -107,33 +110,3 @@ int	get_common_steps_b(t_node *a, t_node *b, t_node *elm)
 			return (stack_length(a) - elm->target_node->index);
 	}
 }
-
-
-
-void	b_to_a(t_node **b, t_node **a)
-{
-	t_node	*cheapest;
-	int		nb;
-	int		i;
-
-	i = 0;
-	cheapest = find_cheapest(b);
-	if (same_direction(cheapest) == 1)
-	{
-		nb = get_common_steps_b(*a, *b, cheapest);
-		while (i < nb)
-		{
-			if (cheapest->above_median)
-				rr(b, a);
-			else
-				rrr(b, a);
-			i++;
-		}
-		take_cheapest_up(b, a, cheapest);
-	}
-	else
-	{
-		take_cheapest_up(b, a, cheapest);
-	}
-}
-

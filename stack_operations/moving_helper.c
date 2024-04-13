@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:32:58 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:30:15 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:01:25 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 /**
 * on_top-checks that the element is on the top of the stack

@@ -6,11 +6,18 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:39:09 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:49:34 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
+
+/**
+* stack_init-goes through each element in argv , check it valid and push
+* @a: the stack we're pushing into
+* @argv: the arguments we're going through
+* @flag: to check if we had 2 or more parameteres to free the memory after
+**/
 
 void	stack_init(t_node **a, char **argv, bool flag)
 {
@@ -37,30 +44,3 @@ void	stack_init(t_node **a, char **argv, bool flag)
 		free_all_str(argv);
 }
 
-bool	sorted_stack(t_node *a)
-{
-	if (!a)
-		return (1);
-	while (a->next)
-	{
-		if (a->value > a->next->value)
-			return (false);
-		a = a->next;
-	}
-	return (true);
-}
-
-int	stack_length(t_node *stack)
-{
-	int	i;
-
-	i = 0;
-	if (!stack)
-		return (0);
-	while (stack)
-	{
-		i++;
-		stack = stack->next;
-	}
-	return (i);
-}

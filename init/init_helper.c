@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:31:02 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:28:59 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:59:55 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	init_cheapest_false(t_node **a)
 {

@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 07:15:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/03/19 06:27:13 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:39:35 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static char	*put(char const *str, int *index, char c)
 {

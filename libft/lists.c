@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:18:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:26:43 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:44:45 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_lstadd_back(t_node **lst, t_node *new)
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   right_order.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 15:02:21 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:28:46 by mfaoussi         ###   ########.fr       */
+/*   Created: 2024/04/13 16:03:34 by mfaoussi          #+#    #+#             */
+/*   Updated: 2024/04/13 16:05:07 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_putchar(char c)
 {
@@ -28,14 +28,28 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+// void	printlst(char **argv)
+// {
+// 	int	i;
 
-void	take_smallest_up(t_node **a, t_node *smallest)
-{
-	while (on_top(a, smallest) == 0)
-	{
-		if (smallest->above_median == true)
-			ra(a);
-		else
-			rra(a);
-	}
-}
+// 	i = 0;
+// 	while (argv[i])
+// 	{
+// 		printf("%s\n", argv[i]);
+// 		i++;
+// 	}
+// }
+// void	print_stack(t_node **a)
+// {
+// 	t_node	*index;
+
+// 	if (!*a)
+// 		return ;
+// 	index = *a;
+// 	while (index)
+// 	{
+// 		printf("%d\n",index->value);
+// 		// printf("cheapest = %d\n", index->cheapest);
+// 		index = index->next;
+// 	}
+// }

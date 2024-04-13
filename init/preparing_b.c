@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:28:14 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 15:37:58 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:58:22 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	preparing_b(t_node **b, t_node **a)
 {
@@ -50,23 +50,7 @@ void	b_targets(t_node **b, t_node **a)
 	}
 }
 
-t_node	*find_smallest(t_node **stack)
-{
-	t_node	*smallest;
-	t_node	*index;
 
-	if (!*stack)
-		return (NULL);
-	smallest = *stack;
-	index = *stack;
-	while (index)
-	{
-		if (index->value < smallest->value)
-			smallest = index;
-		index = index->next;
-	}
-	return (smallest);
-}
 
 void	set_cost_b(t_node **b, t_node **a)
 {
@@ -90,23 +74,5 @@ void	set_cost_b(t_node **b, t_node **a)
 			push_cost = push_cost + (index_b->target_node)->index;
 		index_b->push_cost = push_cost;
 		index_b = index_b->next;
-	}
-}
-
-int	get_common_steps_b(t_node *a, t_node *b, t_node *elm)
-{
-	if (elm->index < elm->target_node->index)
-	{
-		if (elm->above_median == true)
-			return (elm->index);
-		else
-			return (stack_length(b) - elm->index);
-	}
-	else
-	{
-		if (elm->above_median == true)
-			return (elm->target_node->index);
-		else
-			return (stack_length(a) - elm->target_node->index);
 	}
 }

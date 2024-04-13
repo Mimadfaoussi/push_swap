@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 02:11:26 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/06 18:51:29 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:39:40 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	ft_isspace(const char c)
 {

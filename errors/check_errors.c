@@ -6,11 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 18:51:39 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:40:22 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	syntax_checker(char *nbr)
 {

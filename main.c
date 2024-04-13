@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:33:22 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 16:06:13 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:57:55 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int	main(int argc, char **argv)
 		else
 			stack_sort(&a, &b);
 	}
-	free_stack(&a, argv, argc == 2);
+	free_stack(&a);
 	return (0);
 }

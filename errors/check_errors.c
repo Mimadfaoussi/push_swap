@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 06:39:18 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:40:22 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:58:27 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	free_error(t_node **a, char **argv, bool flag)
 	ft_lstclear(a);
 	if (flag == true)
 		free_all_str(argv);
-	ft_putstr("all freed successfully\n");
 	exit(0);
 }
 
@@ -46,7 +45,6 @@ int	check_repetition(t_node **a, int nb)
 	{
 		if (index->value == nb)
 		{
-			ft_putstr("found repetition \n");
 			return (1);
 		}
 		index = index->next;
@@ -54,9 +52,7 @@ int	check_repetition(t_node **a, int nb)
 	return (0);
 }
 
-void	free_stack(t_node **a, char **argv, bool flag)
+void	free_stack(t_node **a)
 {
 	ft_lstclear(a);
-	if (flag == true)
-		free_all_str(argv);
 }

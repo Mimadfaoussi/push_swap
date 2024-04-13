@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:48 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 18:50:05 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:58:47 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	**ft_split(char const *str, char c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize);
 size_t	ft_strlen(const char *s);
 void	free_all_str(char **res);
-void	free_stack(t_node **a, char **argv, bool flag);
+void	free_stack(t_node **a);
 long	ft_atoi(const char *str);
 
 /** Errors checking */

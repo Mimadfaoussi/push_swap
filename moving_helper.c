@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:32:58 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/12 18:51:49 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 15:30:15 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,6 @@ int	on_top(t_node **stack, t_node *elm)
 	if (elm == *stack)
 		return (1);
 	return (0);
-}
-
-/***
-* get_common_steps - function that will get the common rotations 
-* which is the smallest number in between
-**/
-int	get_common_steps(t_node *a, t_node *b, t_node *elm)
-{
-	if (elm->index < elm->target_node->index)
-	{
-		if (elm->above_median == true)
-			return (elm->index);
-		else
-			return (stack_length(a) - elm->index);
-	}
-	else
-	{
-		if (elm->above_median == true)
-			return (elm->target_node->index);
-		else
-			return (stack_length(b) - elm->target_node->index);
-	}
 }
 
 void	take_cheapest_up(t_node **a, t_node **b, t_node *cheapest)
@@ -66,24 +44,41 @@ void	take_cheapest_up(t_node **a, t_node **b, t_node *cheapest)
 	}
 }
 
+void	take_cheapest_up_b(t_node **a, t_node **b, t_node *cheapest)
+{
+	t_node	*target_node;
+
+	target_node = cheapest->target_node;
+	while (on_top(b, cheapest) == 0)
+	{
+		if (cheapest->above_median == true)
+			rb(b);
+		else
+			rrb(b);
+	}
+	while (on_top(a, target_node) == 0)
+	{
+		if (target_node->above_median == true)
+			ra(a);
+		else
+			rra(a);
+	}
+}
+
+
 void	a_to_b(t_node **a, t_node **b)
 {
 	t_node	*cheapest;
-	int		nb;
-	int		i;
 
-	i = 0;
 	cheapest = find_cheapest(a);
 	if (same_direction(cheapest) == 1)
 	{
-		nb = get_common_steps(*a, *b, cheapest);
-		while (i < nb)
+		while (cheapest != *a && cheapest->target_node != *b)
 		{
 			if (cheapest->above_median)
 				rr(a, b);
 			else
 				rrr(a, b);
-			i++;
 		}
 		take_cheapest_up(a, b, cheapest);
 	}
@@ -94,21 +89,16 @@ void	a_to_b(t_node **a, t_node **b)
 void	b_to_a(t_node **b, t_node **a)
 {
 	t_node	*cheapest;
-	int		nb;
-	int		i;
 
-	i = 0;
 	cheapest = find_cheapest(b);
 	if (same_direction(cheapest) == 1)
 	{
-		nb = get_common_steps_b(*a, *b, cheapest);
-		while (i < nb)
+		while (cheapest != *b && cheapest->target_node != *a)
 		{
 			if (cheapest->above_median)
 				rr(b, a);
 			else
 				rrr(b, a);
-			i++;
 		}
 		take_cheapest_up_b(a, b, cheapest);
 	}

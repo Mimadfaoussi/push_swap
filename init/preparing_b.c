@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:28:14 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:58:22 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:06:43 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ void	b_targets(t_node **b, t_node **a)
 		ib = ib->next;
 	}
 }
-
-
 
 void	set_cost_b(t_node **b, t_node **a)
 {

@@ -6,12 +6,11 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:47:35 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:06:34 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 /**
 * stack_sort_3 - takes a stack with 3 values and order it by 

@@ -6,7 +6,7 @@
 /*   By: mfaoussi <mfaoussi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:52:11 by mfaoussi          #+#    #+#             */
-/*   Updated: 2024/04/13 15:49:34 by mfaoussi         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:06:54 by mfaoussi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,3 @@ void	stack_init(t_node **a, char **argv, bool flag)
 	if (flag)
 		free_all_str(argv);
 }
-
